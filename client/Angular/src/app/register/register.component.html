@@ -1,0 +1,168 @@
+<div style="text-align: center">
+    <h3>{{message}}</h3>
+</div>
+
+<div class="container">
+    <div class="row justify-content-center custom-margin">
+        <div class="col-md-4 col-md-6">
+            <h4 class = "mt-5 mb-3 ">SignUp Form</h4>
+            <form action="#login" class="needs-validation" novalidate class="shadow-lg p-4">
+                <fieldset>
+                    <div class="form-group">
+                        <label for="username">Username*</label>
+                        <input required type="text" [(ngModel)]="user.username" name="username" id="username"
+                            class="form-control " maxlength="28" placeholder="Enter username" />
+                            <div class="valid-feedback">
+                                Valid!
+                              </div>
+                              <div class="invalid-feedback">
+                                Please add a Username*.
+                              </div>
+                        </div>
+
+                    <div class="form-group">
+                        <label for="firstname">Firstname</label>
+                        <input class="form-control" type="text" [(ngModel)]="user.firstname" name="firstname" id="firstname" required
+                            placeholder="Enter your firstname" />
+                            <div class="valid-feedback">
+                                Valid!
+                              </div>
+                              <div class="invalid-feedback">
+                                Please add a Firstname.
+                              </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="lastname">Lastname</label>
+                        <input class="form-control" type="text" [(ngModel)]="user.lastname" name="lastname" id="lastname"
+                            placeholder="Enter your lastname" required />
+                        <div id="errLast"></div>
+                        <div class="valid-feedback">
+                            Valid!
+                          </div>
+                          <div class="invalid-feedback">
+                            Please add a Lastname.
+                          </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="age">Age</label>
+                        <input class="form-control" required type="text" [(ngModel)]="user.age" name="age"
+                            id="age" placeholder="Enter your age" />
+                            <div class="valid-feedback">
+                                Valid!
+                              </div>
+                              <div class="invalid-feedback">
+                                Please add a Age.
+                              </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input class="form-control" required type="text" [(ngModel)]="user.password" name="password"
+                            id="password" maxlength="28" placeholder="Enter your password" />
+                            <div class="valid-feedback">
+                                Valid!
+                              </div>
+                              <div class="invalid-feedback">
+                                Please add a Password.
+                              </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="confirmppassword">ConfirmPassword</label>
+                        <input class="form-control" required type="text" [(ngModel)]="user.confirmppassword" name="confirmppassword"
+                            id="confirmppassword" maxlength="28" placeholder="Enter your password" />
+                            <div class="valid-feedback">
+                                Valid!
+                              </div>
+                              <div class="invalid-feedback">
+                                Please add a ConfirmPassword.
+                              </div>
+                    </div><div class="form-group">
+                        <label for="email">Email</label>
+                        <input class="form-control" required type="text" [(ngModel)]="user.email" name="email"
+                            id="email" maxlength="28" placeholder="Enter your email" />
+                            <div class="valid-feedback">
+                                Valid!
+                              </div>
+                              <div class="invalid-feedback">
+                                Please add a Email.
+                              </div>
+                    </div><div class="form-group">
+                        <label for="confirmemail">ConfirmEmail</label>
+                        <input class="form-control" required type="text" [(ngModel)]="user.confirmemail" name="confirmemail"
+                            id="confirmemail"maxlength="28"  placeholder="Enter your confirmemail" />
+                            <div class="valid-feedback">
+                                Valid!
+                              </div>
+                              <div class="invalid-feedback">
+                                Please add a ConfirmEmail.
+                              </div>
+                    </div>
+                    <div class="form-group">
+                    <label for="entermobilenumber">Mobile Number</label>
+                    <input class="form-control" required type="text"[(ngModel)]="user.entermobilenumber" name="entermobilenumber" id="entermobilenumber"
+                    maxlength="28" placeholder="Enter Mobilenumber" ng2TelInput />
+                    <div class="valid-feedback">
+                        Valid!
+                      </div>
+                      <div class="invalid-feedback">
+                        Please add a Mobile Number.
+                      </div>
+                    </div>
+                   <div class="container">
+                        <div class="row">
+                            <div class="col-md-4">        
+                              <label class="text-muted">Gender</label>
+                              <select class="custom-select my-select">
+                                <option>Male</option>
+                                <option>Female</option>
+                              </select>
+                              <div class="valid-feedback">
+                                Valid!
+                              </div>
+                              <div class="invalid-feedback">
+                                Please add a Gender.
+                              </div>
+                                                      
+                            </div>
+                        </div>
+                        
+                      </div><br>
+                      <div class="g-recaptcha" data-sitekey="6Le6NtIZAAAAAL4hX6Mz42nSNyoYGJ8CpF8FDzBN"></div>
+                      
+                    
+
+                    <div class="form-group">
+                        <input class="btn btn-success" type="submit" name="submit_reg" value="Register" (click)="registerNow()">
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+
+    </div>
+</div>
+
+<script>
+    
+// Example starter JavaScript for disabling form submissions if there are invalid fields
+(function() {
+  'use strict';
+  window.addEventListener('load', function() {
+    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+    var forms = document.getElementsByClassName('needs-validation');
+    // Loop over them and prevent submission
+    var validation = Array.prototype.filter.call(forms, function(form) {
+      form.addEventListener('submit', function(event) {
+        if (form.checkValidity() === false) {
+          event.preventDefault();
+          event.stopPropagation();
+        }
+        form.classList.add('was-validated');
+      }, false);
+    });
+  }, false);
+})();
+</script>
+
+
